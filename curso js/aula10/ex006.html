@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20 pt arial;
+            /*estamos mexendo apenas no div com o css*/
+            background: green;/*cor de fundo*/
+            color: antiquewhite;/*a cor em si*/
+            width: 200px;/*largura*/
+            height: 200px;/*tamanho*/
+            line-height: 200px;/*aonde vai ficaar a altura dos caracteres*/
+            text-align: center;/*deixar no centro*/
+
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar ()" onmouseenter="entrar()" onmouseout="saiu()">
+interaja...
+
+    </div>
+    <script>
+    var a = window.document.getElementById('area')//var a esta recebendo a propiedade de area 
+    addEventListener('click',clicar)
+    addEventListener('mouseenter', entrar)
+    addEventListener('mouseout', saiu)
+    function clicar() {//a funçao vazia recebe clicar e quando vc clica a varavel muda para clicou por conta da funçao
+    a.innerText = 'gozou'
+    a.style.background = 'red'
+    }
+
+    function entrar() {//as outras funçoes a mesma coisa 
+    a.innerText = 'entrou'
+    }
+
+    function saiu() {
+    a.innerText = 'tirou'
+    a.style.background = 'green'
+    }
+
+    
+    </script>
+    
+</body>
+</html>
